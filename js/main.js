@@ -18,19 +18,15 @@ let stageVel = 0.4
 function animate(){
     ctx.clearRect(0,0,canvas.width,canvas.height)
 
-    
-    ctx.save()
-    ctx.strokeStyle="black"
     ctx.beginPath()
+    ctx.strokeStyle="black"
     ctx.arc(mouse.x,mouse.y,mouse.r,0,2*Math.PI)
     ctx.stroke()
-    ctx.restore()
 
-    ctx.save()
+    ctx.beginPath()
     ctx.strokeStyle="grey"
     ctx.arc(mouse.x,mouse.y,lastAnimStage,0,2*Math.PI)
     ctx.stroke()
-    ctx.restore()
 
     if(invertStage){
         lastAnimStage-=stageVel
