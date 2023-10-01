@@ -15,7 +15,7 @@ function animate(){
     ctx.clearRect(0,0,canvas.width,canvas.height)
     ctx.strokeStyle="black"
     ctx.beginPath()
-    ctx.arc(mouse.x-mouse.r,mouse.y-mouse.r,mouse.r,0,2*Math.PI)
+    ctx.arc(mouse.x,mouse.y,mouse.r,0,2*Math.PI)
     ctx.stroke()
     requestAnimationFrame(animate)
 }
