@@ -12,9 +12,7 @@ document.body.addEventListener("mousemove", (e)=>{
 })
 
 let lastAnimStage = 0
-let invertStage = false
 let stageVel = 0.4
-
 function animate(){
     ctx.clearRect(0,0,canvas.width,canvas.height)
 
@@ -28,17 +26,10 @@ function animate(){
     ctx.arc(mouse.x,mouse.y,lastAnimStage,0,2*Math.PI)
     ctx.stroke()
 
-    if(invertStage){
-        lastAnimStage-=stageVel
-    }else{
-        lastAnimStage+=stageVel
-    }
+    lastAnimStage+=stageVel
     if(lastAnimStage+1 > mouse.r){
-        invertStage = true 
-    } else if(lastAnimStage < 1){
-        invertStage = false 
+        lastAnimStage = 0
     }
-
     requestAnimationFrame(animate)
 }
 
