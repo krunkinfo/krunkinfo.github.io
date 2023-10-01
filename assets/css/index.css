@@ -1,0 +1,14 @@
+* {
+    color: white;
+    font-family: monospace;
+}
+
+#center-text {
+    width: 100%;
+    height: fit-content;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+}
