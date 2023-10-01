@@ -16,7 +16,7 @@ function animate(){
     ctx.clearRect(0,0,canvas.width,canvas.height)
 
     ctx.beginPath()
-    ctx.strokeStyle="cyan"
+    ctx.strokeStyle="black"
     ctx.arc(mouse.x,mouse.y,lastAnimStage,0,2*Math.PI)
     ctx.stroke()
     lastAnimStage+=stageVel
