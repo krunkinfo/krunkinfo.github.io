@@ -2,7 +2,8 @@ const canvas = document.getElementById("bg-canvas")
 const ctx = canvas.getContext("2d")
 const mouse = {
     x: window.innerWidth/2,
-    y:window.innerHeight/2
+    y:window.innerHeight/2,
+    r:40
 }
 window.onresize=resizeCanvas
 document.body.addEventListener("mousemove", (e)=>{
@@ -12,8 +13,10 @@ document.body.addEventListener("mousemove", (e)=>{
 
 function animate(){
     ctx.clearRect(0,0,canvas.width,canvas.height)
-    ctx.fillStyle="black"
-    ctx.strokeRect(mouse.x,mouse.y,50,50)
+    ctx.strokeStyle="black"
+    ctx.beginPath()
+    ctx.arc(mouse.x-mouse.r,mouse.y-mouse.r,mouse.r,0,2*Math.PI)
+    ctx.stroke()
     requestAnimationFrame(animate)
 }
 
