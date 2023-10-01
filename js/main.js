@@ -1,9 +1,9 @@
 const canvas = document.getElementById("bg-canvas")
 const ctx = canvas.getContext("2d")
 const mouse = {
-    x: window.innerWidth/2,
-    y:window.innerHeight/2,
-    r:40
+    x: Infinity,
+    y: Infinity,
+    r: 40
 }
 window.onresize=resizeCanvas
 document.body.addEventListener("mousemove", (e)=>{
