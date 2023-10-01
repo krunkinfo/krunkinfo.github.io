@@ -21,6 +21,8 @@ function animate(){
     ctx.strokeStyle="black"
     ctx.beginPath()
     ctx.arc(mouse.x,mouse.y,mouse.r,0,2*Math.PI)
+    ctx.stroke()
+    ctx.strokeStyle="grey"
     ctx.arc(mouse.x,mouse.y,lastAnimStage,0,2*Math.PI)
     ctx.stroke()
 
